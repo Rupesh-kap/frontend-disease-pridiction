@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Clean medical theme */
+.medical-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+.medical-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.medical-header {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+  color: white;
+}
+
+.medical-primary {
+  background: #1e40af;
+  color: white;
+}
+
+.medical-secondary {
+  background: #64748b;
+  color: white;
+}
+
+.medical-success {
+  background: #059669;
+  color: white;
+}
+
+.medical-warning {
+  background: #d97706;
+  color: white;
+}
+
+.medical-danger {
+  background: #dc2626;
+  color: white;
+}
+
+/* Form styles */
+.medical-input {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: all 0.2s;
+  background: white;
+}
+
+.medical-input:focus {
+  border-color: #1e40af;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.medical-select {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  background: white;
+  cursor: pointer;
+}
+
+.medical-select:focus {
+  border-color: #1e40af;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.medical-button {
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.medical-button:hover {
+  background: #1e3a8a;
+  transform: translateY(-1px);
+}
+
+.medical-button:active {
+  transform: translateY(0);
+}
+
+/* Progress steps */
+.progress-step {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+  border: 2px solid #e2e8f0;
+}
+
+.progress-step.active {
+  border-color: #1e40af;
+  background: #f0f4ff;
+}
+
+.progress-step.completed {
+  border-color: #059669;
+  background: #f0fdf4;
+}
+
+/* Results cards */
+.result-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.risk-high {
+  border-left: 4px solid #dc2626;
+}
+
+.risk-medium {
+  border-left: 4px solid #d97706;
+}
+
+.risk-low {
+  border-left: 4px solid #059669;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .medical-container {
+    padding: 16px;
+  }
+  
+  .medical-card {
+    margin: 8px 0;
+  }
+  
+  .progress-step {
+    padding: 12px;
+  }
+}
