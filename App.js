@@ -86,7 +86,7 @@ export default function ComprehensiveDiseasePredictor() {
   setPrediction(null);
 
   // Call Flask backend API
-  fetch('http://localhost:5000/predict', {
+  fetch('https://diseasebackend-1.onrender.com/predict', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ export default function ComprehensiveDiseasePredictor() {
     .catch(error => {
       console.error('Error:', error);
       setAnalyzing(false);
-      alert('Failed to connect to backend. Make sure Flask server is running on port 5000.');
+      alert('Failed to connect to backend. Please try again in a moment.');
     });
 };
 
